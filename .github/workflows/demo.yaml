@@ -4,6 +4,12 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "src/components/HelpBox.jsx"
+      - ".github/workflows/*"
 jobs:
   test:
     runs-on: ubuntu-latest
